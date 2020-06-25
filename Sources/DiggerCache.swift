@@ -119,6 +119,11 @@ public class DiggerCache {
 // MARK: - fileHelper
 extension DiggerCache {
     
+    public static func fileExists(filename: String) -> Bool{
+        let path = cachesDirectory.cacheDir + "/" + filename
+        return isFileExist(atPath: path)
+    }
+    
     /// isFileExist
     public static func isFileExist(atPath filePath : String ) -> Bool {
         
@@ -157,6 +162,11 @@ extension DiggerCache {
             diggerLog(error)
         }
         
+    }
+    public static func remove(filename: String) {
+        let path = cachesDirectory.cacheDir + "/" + filename
+        removeItem(atPath: path)
+
     }
     
     /// createDirectory

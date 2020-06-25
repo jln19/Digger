@@ -8,7 +8,7 @@
 
 import UIKit
 
-public let digger = "Digger2"
+public let digger = "Videos"
 
 
 
